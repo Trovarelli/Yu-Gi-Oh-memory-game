@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Megrim', cursive;
+}
+
+body{
+    height: 100vh;
+    background-color: #a55c1b;
+    background-image: linear-gradient(180deg, #a55c1b 0%, #000000 45%);
+}
+
+.nav {
+    position: absolute;
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    padding: 10px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+.blank {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;    
+}
+
+.points {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h1 {
+    padding: 5px;
+}
+
+#points2 {
+    position: absolute;
+    margin-top: 130px;
+}
+
+#points1 {
+    position: absolute;
+    margin-top: 130px;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    z-index: 2;
+    margin: auto;
+    flex-direction: column;
+    margin-left: auto;
+    opacity: 1;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+button {
+    margin-top: 120px;
+    width: 120px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.modalbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.player {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    font-size: 50px;
+}
+@keyframes pulse {
+    from {
+        
+      }
+    
+      to {
+        font-size: 60px;
+      }
+}
+
+.memory-game{
+    width: 650px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 100px;
+  
+}
+
+.memory-card{
+    margin: 5px;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position:relative;
+    cursor: pointer;
+    /*Efeitos*/
+    transform: scale(1);
+    transform-style:  preserve-3d;
+    transition: transform .5s;  
+}
+
+/*Efeito de Clique*/
+.memory-card:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}

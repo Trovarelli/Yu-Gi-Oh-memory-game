@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img.png" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Jogo da Memória</title>
+  </head>
+  <body>
+    
+    <div>
+      <h1 class="nav">Yu-Gi-Oh memory game</h1>
+    </div>  
+    <div class="content">
+      <div class="modalbox" id="modalbox">
+        <div id="modal" class="modal">
+          <h1 id="winner"></h1>
+          <button onclick="closeModal(), window.location.reload()">RESTART</button>
+        </div>
+      </div>
+      <div class="points">
+        <h1 class="player" id="player1">Player 1</h1><br>
+        <h1 id="points1">0</h1>
+      </div>
+      
+      <div class="d-flex">
+       
+        <section class="memory-game">
+          <div class="memory-card" data-framework="red-dragon">
+            <img class="front-face" src="icons/red-dragon.jpg" alt="red-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          <div class="memory-card" data-framework="red-dragon">
+            <img class="front-face" src="icons/red-dragon.jpg" alt="red-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+    
+          <div class="memory-card" data-framework="black-dragon">
+            <img class="front-face" src="icons/black-dragon.jpg" alt="black-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          
+          <div class="memory-card" data-framework="black-dragon">
+            <img class="front-face" src="icons/black-dragon.jpg" alt="black-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+    
+          <div class="memory-card" data-framework="white-dragon">
+            <img class="front-face" src="icons/white-dragon.jpg" alt="white-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          <div class="memory-card" data-framework="white-dragon">
+            <img class="front-face" src="icons/white-dragon.jpg" alt="white-dragon" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+    
+          <div class="memory-card" data-framework="mage">
+            <img class="front-face" src="icons/mage.jpg" alt="mage" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          <div class="memory-card" data-framework="mage">
+            <img class="front-face" src="icons/mage.jpg" alt="mage" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+    
+          <div class="memory-card" data-framework="dark-witch">
+            <img class="front-face" src="icons/dark-witch.jpg" alt="dark-witch" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          <div class="memory-card" data-framework="dark-witch">
+            <img class="front-face" src="icons/dark-witch.jpg" alt="dark-witch" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+    
+          <div class="memory-card" data-framework="kinght">
+            <img class="front-face" src="icons/kinght.png" alt="kinght" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+          <div class="memory-card" data-framework="kinght">
+            <img class="front-face" src="icons/kinght.png" alt="kinght" />
+            <img class="back-face" src="icons/back.jpg" alt="card-back" />
+          </div>
+        </section>
+      </div>
+      <div class="blank">
+        <h1 class="" id="player2">Player 2</h1><br>
+        <h1 id="points2">0</h1>
+      </div>
+    </div>
+  </body>
+</html>
